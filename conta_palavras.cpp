@@ -1,4 +1,4 @@
-#include "conta_palavras.h"
+#include "conta_palavras.hpp"
 #include <fstream>
 #include <sstream>
 #include <algorithm>
