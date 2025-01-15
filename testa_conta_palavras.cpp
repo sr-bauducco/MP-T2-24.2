@@ -60,8 +60,7 @@ TEST_CASE("Teste 5: separação com pontuação e caracteres especiais") {
 
 TEST_CASE("Teste 6: normalização das palavras para lowerCase") {
   std::string texto = lerArquivo("teste6.txt");
-  auto resultado = lowerCase(texto);
-
+  std::string resultado = lowerCase(texto);
   REQUIRE(resultado == "envio para teste válido");
 }
 

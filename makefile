@@ -35,6 +35,6 @@ cppcheck: testa_conta_palavras.cpp conta_palavras.cpp conta_palavras.hpp
 valgrind: testa_conta_palavras
 	valgrind --leak-check=yes --log-file=valgrind.rpt testa_conta_palavras
 
-clean:
-	del /Q *.o *.exe *.gc* testa_conta_palavras 2>nul || exit 0
+	clean:
+		del /Q *.o *.exe *.gc* testa_conta_palavras 2>nul || exit 0
 
