@@ -13,8 +13,9 @@ compile: testa_conta_palavras.cpp conta_palavras.o
 test: testa_conta_palavras
 	./testa_conta_palavras
 
-cpplint: testa_conta_palavras.cpp conta_palavras.cpp conta_palavras.hpp
-	python3 cpplint.py --exclude=catch.hpp *.*
+cpplint: testa_conta_palavras.cpp conta_palavras.cpp conta_palavras.h
+	python3 cpplint.py --exclude=catch.hpp testa_conta_palavras.cpp conta_palavras.cpp conta_palavras.h
+
 
 gcov: testa_conta_palavras.cpp conta_palavras.cpp conta_palavras.hpp 
 	g++ -std=c++11 -Wall -ftest-coverage -fprofile-arcs -c conta_palavras.cpp 
