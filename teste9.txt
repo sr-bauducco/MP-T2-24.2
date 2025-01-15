@@ -1,1 +1,1 @@
-Esse é um TESTE para ordenar palavras com Case
+Esse teste serve para ordenar com Case
