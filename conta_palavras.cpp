@@ -1,7 +1,7 @@
 /**
  * \file conta_palavras.cpp
  * \brief Implementação das funções para contagem e ordenação das palavras do texto.
- * 
+ * \author Ana Luísa de Souza Paraguassu - 231003442.
  */
 #include "conta_palavras.hpp"
 #include <iostream>
@@ -22,7 +22,7 @@
  * Caso contrário, o conteúdo do arquivo é lido e retornado como uma string.
  */
 std::string lerArquivo(std::string nome_do_arquivo) {
-  std::ifstream arquivo(nome_do_arquivo);
+  std::ifstream arquivo("input/" + nome_do_arquivo);
   if (!arquivo.is_open()) {
     throw std::runtime_error("Erro ao abrir o arquivo: " + nome_do_arquivo);
   }
