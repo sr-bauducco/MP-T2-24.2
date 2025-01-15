@@ -11,21 +11,21 @@
 #include <string>
 
 TEST_CASE("Teste 1: texto vazio") {
-  std::string texto = lerArquivo("teste1");
+  std::string texto = lerArquivo("teste1.txt");
   auto resultado = ContaPalavras(texto);
 
   REQUIRE(resultado.size() == 0);
 }
 
 TEST_CASE("Teste 2: leitura de arquivo") {
-  std::string texto = lerArquivo("teste2");
+  std::string texto = lerArquivo("teste2.txt");
   auto resultado = ContaPalavras(texto);
 
   REQUIRE(resultado.size() == 1);
 }
 
 TEST_CASE("Teste 3: separação de palavras") {
-  std::string texto = lerArquivo("teste3");
+  std::string texto = lerArquivo("teste3.txt");
   auto resultado = ContaPalavras(texto);
 
   REQUIRE(resultado.size() == 2);
@@ -34,7 +34,7 @@ TEST_CASE("Teste 3: separação de palavras") {
 }
 
 TEST_CASE("Teste 4: contagem de ocorrências das palavras") {
-  std::string texto = lerArquivo("teste4");
+  std::string texto = lerArquivo("teste4.txt");
   auto resultado = ContaPalavras(texto);
 
   REQUIRE(resultado.size() == 3);
@@ -47,7 +47,7 @@ TEST_CASE("Teste 4: contagem de ocorrências das palavras") {
 }
 
 TEST_CASE("Teste 5: separação com pontuação e caracteres especiais") {
-  std::string texto = lerArquivo("teste5");
+  std::string texto = lerArquivo("teste5.txt");
   auto resultado = ContaPalavras(texto);
 
   REQUIRE(resultado.size() == 5);
@@ -59,21 +59,21 @@ TEST_CASE("Teste 5: separação com pontuação e caracteres especiais") {
 }
 
 TEST_CASE("Teste 6: normalização das palavras para lowerCase") {
-  std::string texto = lerArquivo("teste6");
+  std::string texto = lerArquivo("teste6.txt");
   auto resultado = lowerCase(texto);
 
   REQUIRE(resultado == "envio para teste válido");
 }
 
 TEST_CASE("Teste 7: normalização das palavras com remoção de acento") {
-  std::string texto = lerArquivo("teste7");
+  std::string texto = lerArquivo("teste7.txt");
   auto resultado = removerAcentos(texto);
 
   REQUIRE(resultado == "ha informacao logica no texto");
 }
 
 TEST_CASE("Teste 8: ordenação alfabética das palavras") {
-  std::string texto = lerArquivo("teste8");
+  std::string texto = lerArquivo("teste8.txt");
   auto resultado = ContaPalavras(texto);
 
   REQUIRE(resultado.size() == 8);
@@ -88,7 +88,7 @@ TEST_CASE("Teste 8: ordenação alfabética das palavras") {
 }
 
 TEST_CASE("Teste 9: ordenação considerando letras minúsculas e maiúsculas") {
-  std::string texto = lerArquivo("teste9");
+  std::string texto = lerArquivo("teste9.txt");
   auto resultado = ContaPalavras(texto);
 
   REQUIRE(resultado.size() == 7);
@@ -102,7 +102,7 @@ TEST_CASE("Teste 9: ordenação considerando letras minúsculas e maiúsculas") 
 }
 
 TEST_CASE("Teste 10: ordenação considerando acentuação") {
-  std::string texto = lerArquivo("teste10");
+  std::string texto = lerArquivo("teste10.txt");
   auto resultado = ContaPalavras(texto);
 
   REQUIRE(resultado.size() == 7);
