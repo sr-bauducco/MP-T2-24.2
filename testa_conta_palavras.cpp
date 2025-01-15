@@ -1,78 +1,123 @@
-// testa_conta_palavras.cpp
+/**
+ * \file testa_conta_palavras.cpp
+ * \brief Testes unitários para verificar o contador de palavras usando Catch2.
+ *
+ */
+
+#define CATCH_CONFIG_NO_POSIX_SIGNALS
+#define CATCH_CONFIG_MAIN
+#include "catch.hpp"
 #include "conta_palavras.hpp"
-#include <iostream>
-#include <cassert>
+#include <string>
 
-void testaArquivo(const std::string& nomeArquivo, const std::map<std::string, int>& esperado) {
-    ContaPalavras cp;
-    cp.processaArquivo(nomeArquivo);
-    auto palavras = cp.getPalavrasOrdenadas();
+TEST_CASE("Teste 1: texto vazio") {
+  std::string texto = lerArquivo("teste1");
+  auto resultado = ContaPalavras(texto);
 
-    assert(palavras == esperado);
-    std::cout << "Teste com " << nomeArquivo << " passou!" << std::endl;
+  REQUIRE(resultado.size() == 0);
 }
 
-int main() {
-    testaArquivo("1.txt", {
-        {"Este", 1}, {"texto", 2}, {"é", 1}, {"o", 1}, {"que", 1}, {"será", 1}, {"utilizado", 1}
-    });
-/** 
-    testaArquivo("2.txt", {
-        {"Um", 1}, {"exemplo", 3}, {"simples", 1}, {"com", 1}, {"palavras", 1}, {"repetidas", 1}
-    });
+TEST_CASE("Teste 2: leitura de arquivo") {
+  std::string texto = lerArquivo("teste2");
+  auto resultado = ContaPalavras(texto);
 
-    testaArquivo("3.txt", {
-        {"Teste", 1}, {"com", 1}, {"caracteres", 1}, {"especiais", 1}, {"E", 1}, {"também", 1}, {"números", 1}
-    });
+  REQUIRE(resultado.size() == 1);
+}
 
-    testaArquivo("4.txt", {
-        {"Palavras", 1}, {"ÚNICAS", 1}, {"com", 1}, {"maiúsculas", 1}, {"e", 1}, {"minúsculas", 1}, {"devem", 1}, {"ser", 1}, {"contadas", 1}, {"separadamente", 1}, {"únicas", 1}
-    });
+TEST_CASE("Teste 3: separação de palavras") {
+  std::string texto = lerArquivo("teste3");
+  auto resultado = ContaPalavras(texto);
 
-    testaArquivo("5.txt", {
-        {"Arquivo", 1}, {"com", 1}, {"múltiplas", 1}, {"linhas", 1}, {"Essa", 1}, {"é", 1}, {"a", 1}, {"segunda", 1}, {"linha", 1}, {"E", 1}, {"aqui", 1}, {"está", 1}, {"terceira", 1}
-    });
+  REQUIRE(resultado.size() == 2);
+  REQUIRE(resultado[0].first == "texto");
+  REQUIRE(resultado[1].first == "utilizado");
+}
 
-    testaArquivo("6.txt", {
-        {"Espaços", 1}, {"extras", 1}, {"não", 1}, {"devem", 1}, {"afetar", 1}, {"o", 1}, {"resultado", 1}
-    });
+TEST_CASE("Teste 4: contagem de ocorrências das palavras") {
+  std::string texto = lerArquivo("teste4");
+  auto resultado = ContaPalavras(texto);
 
-    testaArquivo("7.txt", {
-        {"Não", 1}, {"deve", 1}, {"contar", 1}, {"números", 1}, {"apenas", 1}, {"palavras", 1}, {"alfabéticas", 1}
-    });
+  REQUIRE(resultado.size() == 3);
+  REQUIRE(resultado[0].first == "texto");
+  REQUIRE(resultado[0].second == 2);
+  REQUIRE(resultado[1].first == "utilizado");
+  REQUIRE(resultado[1].second == 1);
+  REQUIRE(resultado[2].first == "validado");
+  REQUIRE(resultado[2].second == 1);
+}
 
-    testaArquivo("8.txt", {
-        {"Contar", 1}, {"palavras", 1}, {"longas", 1}, {"como", 1}, {"pseudopseudohipoparatiroidismo", 1}, {"corretamente", 1}
-    });
+TEST_CASE("Teste 5: separação com pontuação e caracteres especiais") {
+  std::string texto = lerArquivo("teste5");
+  auto resultado = ContaPalavras(texto);
 
-    testaArquivo("9.txt", {
-        {"Palavras", 1}, {"com", 1}, {"hífen", 1}, {"como", 1}, {"sub-região", 1}, {"devem", 1}, {"ser", 1}, {"consideradas", 1}, {"únicas", 1}
-    });
+  REQUIRE(resultado.size() == 5);
+  REQUIRE(resultado[0].first == "abra");
+  REQUIRE(resultado[1].first == "ajuste");
+  REQUIRE(resultado[2].first == "alinhe");
+  REQUIRE(resultado[3].first == "texto");
+  REQUIRE(resultado[4].first == "válido");
+}
 
-    testaArquivo("10.txt", {
-        {"Teste", 1}, {"de", 1}, {"limites", 1}, {"uma", 1}, {"única", 1}, {"palavra", 1}
-    });
+TEST_CASE("Teste 6: normalização das palavras para lowerCase") {
+  std::string texto = lerArquivo("teste6");
+  auto resultado = lowerCase(texto);
 
-    testaArquivo("11.txt", {
-        {"Misturar", 1}, {"idiomas", 1}, {"English", 1}, {"português", 1}, {"français", 1}, {"español", 1}
-    });
+  REQUIRE(resultado == "envio para teste válido");
+}
 
-    testaArquivo("12.txt", {
-        {"O", 2}, {"mesmo", 2}, {"texto", 2}, {"repetido", 2}, {"várias", 2}, {"vezes", 2}
-    });
+TEST_CASE("Teste 7: normalização das palavras com remoção de acento") {
+  std::string texto = lerArquivo("teste7");
+  auto resultado = removerAcentos(texto);
 
-    testaArquivo("13.txt", {
-        {"Linha", 1}, {"única", 1}, {"mas", 1}, {"longa", 1}, {"o", 1}, {"suficiente", 1}, {"para", 1}, {"testar", 1}, {"desempenho", 1}, {"do", 1}, {"sistema", 1}, {"com", 1}, {"textos", 1}, {"extensos", 1}, {"Esta", 1}, {"deve", 1}, {"garantir", 1}, {"que", 1}, {"nenhum", 1}, {"problema", 1}, {"ocorra", 1}, {"quando", 1}, {"processamos", 1}, {"em", 1}, {"uma", 1}
-    });
+  REQUIRE(resultado == "ha informacao logica no texto");
+}
 
-    testaArquivo("14.txt", {
-        {"Teste", 1}, {"com", 1}, {"abreviações", 1}, {"como", 1}, {"U", 1}, {"S", 1}, {"A", 1}, {"O", 1}, {"N", 1}, {"U", 1}, {"e", 1}, {"siglas", 1}, {"NASA", 1}, {"FBI", 1}
-    });
+TEST_CASE("Teste 8: ordenação alfabética das palavras") {
+  std::string texto = lerArquivo("teste8");
+  auto resultado = ContaPalavras(texto);
 
-    testaArquivo("15.txt", {
-        {"Teste", 1}, {"com", 1}, {"palavras", 1}, {"únicas", 1}, {"e", 1}, {"repetidas", 1}, {"para", 1}, {"validar", 1}, {"a", 1}, {"contagem", 1}, {"precisa", 1}, {"palavra", 1}, {"repetida", 2}
-    });
-*/
-    std::cout << "Todos passaram com sucesso!" << std::endl;
-    return 0;
+  REQUIRE(resultado.size() == 8);
+  REQUIRE(resultado[0].first == "de");
+  REQUIRE(resultado[1].first == "este");
+  REQUIRE(resultado[2].first == "exemplo");
+  REQUIRE(resultado[3].first == "ordenar");
+  REQUIRE(resultado[4].first == "palavras");
+  REQUIRE(resultado[5].first == "para");
+  REQUIRE(resultado[6].first == "serve");
+  REQUIRE(resultado[7].first == "teste");
+}
+
+TEST_CASE("Teste 9: ordenação considerando letras minúsculas e maiúsculas") {
+  std::string texto = lerArquivo("teste9");
+  auto resultado = ContaPalavras(texto);
+
+  REQUIRE(resultado.size() == 7);
+  REQUIRE(resultado[0].first == "Case");
+  REQUIRE(resultado[1].first == "com");
+  REQUIRE(resultado[2].first == "Esse");
+  REQUIRE(resultado[3].first == "ordenar");
+  REQUIRE(resultado[4].first == "para");
+  REQUIRE(resultado[5].first == "serve");
+  REQUIRE(resultado[6].first == "teste");
+}
+
+TEST_CASE("Teste 10: ordenação considerando acentuação") {
+  std::string texto = lerArquivo("teste10");
+  auto resultado = ContaPalavras(texto);
+
+  REQUIRE(resultado.size() == 7);
+  REQUIRE(resultado[0].first == "é");
+  REQUIRE(resultado[0].second == 1);
+  REQUIRE(resultado[1].first == "Este");
+  REQUIRE(resultado[1].second == 1);
+  REQUIRE(resultado[2].first == "o");
+  REQUIRE(resultado[2].second == 1);
+  REQUIRE(resultado[3].first == "que");
+  REQUIRE(resultado[3].second == 1);
+  REQUIRE(resultado[4].first == "será");
+  REQUIRE(resultado[4].second == 1);
+  REQUIRE(resultado[5].first == "texto");
+  REQUIRE(resultado[5].second == 2);
+  REQUIRE(resultado[6].first == "utilizado");
+  REQUIRE(resultado[6].second == 1);
 }
