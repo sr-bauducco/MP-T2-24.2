@@ -35,4 +35,5 @@ valgrind: testa_conta_palavras
 	valgrind --leak-check=yes --log-file=valgrind.rpt testa_conta_palavras
 
 clean:
-	rm -rf *.o *.exe *.gc* testa_conta_palavras
+	del /Q *.o *.exe *.gc* testa_conta_palavras 2>nul || exit 0
+
