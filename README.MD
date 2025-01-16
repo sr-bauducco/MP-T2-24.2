@@ -30,9 +30,9 @@ O **Chocolatey** é um gerenciador de pacotes para Windows que facilita a instal
 2. Execute o seguinte comando para instalar o Chocolatey:
    ```powershell
    Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.SecurityProtocolType]::Tls12; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))
-```
+ ```
 
-2. Instalar o C++
+## 2. Instalar o C++
 MinGW (via Chocolatey)
 Com o Chocolatey instalado, execute:
 bash
@@ -57,7 +57,7 @@ choco install mingw
 Verifique a instalação com:
 bash
 Copiar
-Editar
+2.Editar
 gcov --version
 5. Instalar o CPPLint
 Certifique-se de ter o Python instalado.
