@@ -1,0 +1,61 @@
+\chapter{MP-\/\+T2-\/24.2}
+\hypertarget{md__r_e_a_d_m_e}{}\label{md__r_e_a_d_m_e}\index{MP-\/T2-\/24.2@{MP-\/T2-\/24.2}}
+\label{md__r_e_a_d_m_e_autotoc_md0}%
+\Hypertarget{md__r_e_a_d_m_e_autotoc_md0}%
+
+
+Este repositório contém o código e documentação do projeto {\bfseries{MP-\/\+T2-\/24.\+2}}. ~\newline
+ Abaixo estão descritas as tecnologias utilizadas e as instruções para instalação das dependências necessárias.
+
+\DoxyHorRuler{0}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md2}{}\doxysection{\texorpdfstring{Tecnologias Usadas}{Tecnologias Usadas}}\label{md__r_e_a_d_m_e_autotoc_md2}
+O projeto utiliza as seguintes tecnologias\+:
+
+
+\begin{DoxyItemize}
+\item {\bfseries{C++}}\+: Linguagem principal de desenvolvimento.
+\item {\bfseries{CMake}}\+: Ferramenta para automatizar o processo de build.
+\item {\bfseries{GCov}}\+: Ferramenta para análise de cobertura de código.
+\item {\bfseries{CPPLint}}\+: Ferramenta para verificação de estilo de código C++.
+\item {\bfseries{Cpp\+Check}}\+: Ferramenta para análise estática de código.
+\item {\bfseries{Doxygen}}\+: Gerador de documentação automatizada.
+\item {\bfseries{Chocolatey}}\+: Gerenciador de pacotes para instalação de dependências no Windows.
+\end{DoxyItemize}
+
+\DoxyHorRuler{0}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md4}{}\doxysection{\texorpdfstring{Como Instalar as Tecnologias}{Como Instalar as Tecnologias}}\label{md__r_e_a_d_m_e_autotoc_md4}
+Siga os passos abaixo para configurar o ambiente necessário\+:\hypertarget{md__r_e_a_d_m_e_autotoc_md5}{}\doxysubsection{\texorpdfstring{1. Instalar o Chocolatey}{1. Instalar o Chocolatey}}\label{md__r_e_a_d_m_e_autotoc_md5}
+O {\bfseries{Chocolatey}} é um gerenciador de pacotes para Windows que facilita a instalação de ferramentas.
+
+
+\begin{DoxyEnumerate}
+\item Abra o {\bfseries{Power\+Shell}} como administrador.
+\item Execute o seguinte comando para instalar o Chocolatey\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{Set-\/ExecutionPolicy\ Bypass\ -\/Scope\ Process\ -\/Force;\ [System.Net.ServicePointManager]::SecurityProtocol\ =\ [System.Net.SecurityProtocolType]::Tls12;\ iex\ ((New-\/Object\ System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))}
+
+\end{DoxyCode}
+
+\end{DoxyEnumerate}\hypertarget{md__r_e_a_d_m_e_autotoc_md6}{}\doxysection{\texorpdfstring{2. Instalar o C++}{2. Instalar o C++}}\label{md__r_e_a_d_m_e_autotoc_md6}
+Min\+GW (via Chocolatey) Com o Chocolatey instalado, execute\+:
+
+choco install mingw
+
+Microsoft Visual Studio Baixe e instale o Visual Studio Community. Durante a instalação, selecione a carga de trabalho "{}\+Desenvolvimento de desktop com C++"{}.\hypertarget{md__r_e_a_d_m_e_autotoc_md7}{}\doxysection{\texorpdfstring{3. Instalar o CMake}{3. Instalar o CMake}}\label{md__r_e_a_d_m_e_autotoc_md7}
+Execute o comando no Power\+Shell (com o Chocolatey)\+: choco install cmake\hypertarget{md__r_e_a_d_m_e_autotoc_md8}{}\doxysection{\texorpdfstring{4. Instalar o GCov}{4. Instalar o GCov}}\label{md__r_e_a_d_m_e_autotoc_md8}
+O GCov está incluído no GCC, que é instalado com o Min\+GW\+:
+
+choco install mingw
+
+Verifique a instalação com\+:
+
+gcov --version \hypertarget{md__r_e_a_d_m_e_autotoc_md9}{}\doxysection{\texorpdfstring{5. Instalar o CPPLint}{5. Instalar o CPPLint}}\label{md__r_e_a_d_m_e_autotoc_md9}
+Certifique-\/se de ter o Python instalado. Use o comando\+:
+
+pip install cpplint \hypertarget{md__r_e_a_d_m_e_autotoc_md10}{}\doxysection{\texorpdfstring{6. Instalar o Cpp\+Check}{6. Instalar o Cpp\+Check}}\label{md__r_e_a_d_m_e_autotoc_md10}
+Instale o Cpp\+Check com o Chocolatey\+:
+
+choco install cppcheck \hypertarget{md__r_e_a_d_m_e_autotoc_md11}{}\doxysection{\texorpdfstring{7. Instalar o Doxygen}{7. Instalar o Doxygen}}\label{md__r_e_a_d_m_e_autotoc_md11}
+Instale o Doxygen com o Chocolatey\+:
+
+choco install doxygen Alternativamente, baixe o Doxygen do site oficial\+: Doxygen Downloads. 

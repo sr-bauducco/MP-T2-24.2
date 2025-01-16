@@ -1,0 +1,160 @@
+\doxysection{testa\+\_\+conta\+\_\+palavras.\+cpp File Reference}
+\hypertarget{testa__conta__palavras_8cpp}{}\label{testa__conta__palavras_8cpp}\index{testa\_conta\_palavras.cpp@{testa\_conta\_palavras.cpp}}
+
+
+Testes unitários para verificar a funcionalidade do contador de palavras.  
+
+
+{\ttfamily \#include "{}catch.\+hpp"{}}\newline
+{\ttfamily \#include "{}conta\+\_\+palavras.\+hpp"{}}\newline
+{\ttfamily \#include $<$string$>$}\newline
+Include dependency graph for testa\+\_\+conta\+\_\+palavras.\+cpp\+:
+% FIG 0
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{testa__conta__palavras_8cpp_a2ac1f5db1f23206fb59da2cfca81948d}{TEST\+\_\+\+CASE}} ("{}Teste 1\+: texto vazio"{})
+\begin{DoxyCompactList}\small\item\em Testa a contagem de palavras em um texto vazio. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{testa__conta__palavras_8cpp_a8984d5178979f0b82c05ae94e6b80d94}{TEST\+\_\+\+CASE}} ("{}Teste 2\+: leitura de arquivo"{})
+\begin{DoxyCompactList}\small\item\em Testa a leitura de arquivos. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{testa__conta__palavras_8cpp_af0d41e0cf83fb4282707bd75af5a7b97}{TEST\+\_\+\+CASE}} ("{}Teste 3\+: separação de palavras"{})
+\begin{DoxyCompactList}\small\item\em Testa a separação de palavras. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{testa__conta__palavras_8cpp_acc72a7c929ece0ef3d085f0ff6875f4b}{TEST\+\_\+\+CASE}} ("{}Teste 4\+: contagem de ocorrências das palavras"{})
+\begin{DoxyCompactList}\small\item\em Testa a contagem de ocorrências das palavras. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{testa__conta__palavras_8cpp_aa2d43f11ecf2a0c506073557dd31e532}{TEST\+\_\+\+CASE}} ("{}Teste 5\+: separação com pontuação e caracteres especiais"{})
+\begin{DoxyCompactList}\small\item\em Testa a separação de palavras com pontuação e caracteres especiais. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{testa__conta__palavras_8cpp_a40c405d275b25b721685a2ec5001b1be}{TEST\+\_\+\+CASE}} ("{}Teste 6\+: normalização das palavras para lower\+Case"{})
+\begin{DoxyCompactList}\small\item\em Testa a normalização para letras minúsculas. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{testa__conta__palavras_8cpp_a2f63d16fae90f841cfd90380d06561b4}{TEST\+\_\+\+CASE}} ("{}Teste 7\+: normalização das palavras com remoção de acento"{})
+\begin{DoxyCompactList}\small\item\em Testa a remoção de acentos. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{testa__conta__palavras_8cpp_ac619e69a5e660a7496f8809db4cbfcab}{TEST\+\_\+\+CASE}} ("{}Teste 8\+: ordenação alfabética das palavras"{})
+\begin{DoxyCompactList}\small\item\em Testa a ordenação alfabética das palavras. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{testa__conta__palavras_8cpp_aaebc482c54616a8c2d3e91d1e5834f3e}{TEST\+\_\+\+CASE}} ("{}Teste 9\+: ordenação considerando letras minúsculas e maiúsculas"{})
+\begin{DoxyCompactList}\small\item\em Testa a ordenação considerando letras maiúsculas e minúsculas. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{testa__conta__palavras_8cpp_a4a45401ba8e6f67dd8bdae462bd85d42}{TEST\+\_\+\+CASE}} ("{}Teste 10\+: ordenação considerando acentuação"{})
+\begin{DoxyCompactList}\small\item\em Testa a ordenação considerando palavras com acentuação. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Testes unitários para verificar a funcionalidade do contador de palavras. 
+
+\begin{DoxyVersion}{Version}
+1.\+0
+\end{DoxyVersion}
+
+
+Este arquivo utiliza o framework Catch2 para realizar testes unitários das funções implementadas no arquivo {\ttfamily conta\+\_\+palavras.\+cpp}. Os testes cobrem\+:
+\begin{DoxyItemize}
+\item Leitura de arquivos.
+\item Separação e contagem de palavras.
+\item Normalização de texto (conversão para minúsculas e remoção de acentos).
+\item Ordenação alfabética e tratamento de palavras com acentuação ou caracteres especiais.
+\end{DoxyItemize}
+
+\begin{DoxyNote}{Note}
+Para compilar e executar os testes, é necessário incluir o framework Catch2. 
+\end{DoxyNote}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{testa__conta__palavras_8cpp_a4a45401ba8e6f67dd8bdae462bd85d42}\index{testa\_conta\_palavras.cpp@{testa\_conta\_palavras.cpp}!TEST\_CASE@{TEST\_CASE}}
+\index{TEST\_CASE@{TEST\_CASE}!testa\_conta\_palavras.cpp@{testa\_conta\_palavras.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_CASE()}{TEST\_CASE()}\hspace{0.1cm}{\footnotesize\ttfamily [1/10]}}
+{\footnotesize\ttfamily \label{testa__conta__palavras_8cpp_a4a45401ba8e6f67dd8bdae462bd85d42} 
+TEST\+\_\+\+CASE (\begin{DoxyParamCaption}\item[{"{}Teste 10\+: ordenação considerando acentuação"{}}]{}{}\end{DoxyParamCaption})}
+
+
+
+Testa a ordenação considerando palavras com acentuação. 
+
+Garante que palavras com acentos são tratadas corretamente durante a ordenação. \Hypertarget{testa__conta__palavras_8cpp_a2ac1f5db1f23206fb59da2cfca81948d}\index{testa\_conta\_palavras.cpp@{testa\_conta\_palavras.cpp}!TEST\_CASE@{TEST\_CASE}}
+\index{TEST\_CASE@{TEST\_CASE}!testa\_conta\_palavras.cpp@{testa\_conta\_palavras.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_CASE()}{TEST\_CASE()}\hspace{0.1cm}{\footnotesize\ttfamily [2/10]}}
+{\footnotesize\ttfamily \label{testa__conta__palavras_8cpp_a2ac1f5db1f23206fb59da2cfca81948d} 
+TEST\+\_\+\+CASE (\begin{DoxyParamCaption}\item[{"{}Teste 1\+: texto vazio"{}}]{}{}\end{DoxyParamCaption})}
+
+
+
+Testa a contagem de palavras em um texto vazio. 
+
+Verifica se o vetor de resultados está vazio ao processar um arquivo vazio. \Hypertarget{testa__conta__palavras_8cpp_a8984d5178979f0b82c05ae94e6b80d94}\index{testa\_conta\_palavras.cpp@{testa\_conta\_palavras.cpp}!TEST\_CASE@{TEST\_CASE}}
+\index{TEST\_CASE@{TEST\_CASE}!testa\_conta\_palavras.cpp@{testa\_conta\_palavras.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_CASE()}{TEST\_CASE()}\hspace{0.1cm}{\footnotesize\ttfamily [3/10]}}
+{\footnotesize\ttfamily \label{testa__conta__palavras_8cpp_a8984d5178979f0b82c05ae94e6b80d94} 
+TEST\+\_\+\+CASE (\begin{DoxyParamCaption}\item[{"{}Teste 2\+: leitura de arquivo"{}}]{}{}\end{DoxyParamCaption})}
+
+
+
+Testa a leitura de arquivos. 
+
+Verifica se a função {\ttfamily ler\+Arquivo} lê corretamente o conteúdo de um arquivo. \Hypertarget{testa__conta__palavras_8cpp_af0d41e0cf83fb4282707bd75af5a7b97}\index{testa\_conta\_palavras.cpp@{testa\_conta\_palavras.cpp}!TEST\_CASE@{TEST\_CASE}}
+\index{TEST\_CASE@{TEST\_CASE}!testa\_conta\_palavras.cpp@{testa\_conta\_palavras.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_CASE()}{TEST\_CASE()}\hspace{0.1cm}{\footnotesize\ttfamily [4/10]}}
+{\footnotesize\ttfamily \label{testa__conta__palavras_8cpp_af0d41e0cf83fb4282707bd75af5a7b97} 
+TEST\+\_\+\+CASE (\begin{DoxyParamCaption}\item[{"{}Teste 3\+: separação de palavras"{}}]{}{}\end{DoxyParamCaption})}
+
+
+
+Testa a separação de palavras. 
+
+Garante que as palavras são corretamente separadas e inseridas no vetor de resultados. \Hypertarget{testa__conta__palavras_8cpp_acc72a7c929ece0ef3d085f0ff6875f4b}\index{testa\_conta\_palavras.cpp@{testa\_conta\_palavras.cpp}!TEST\_CASE@{TEST\_CASE}}
+\index{TEST\_CASE@{TEST\_CASE}!testa\_conta\_palavras.cpp@{testa\_conta\_palavras.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_CASE()}{TEST\_CASE()}\hspace{0.1cm}{\footnotesize\ttfamily [5/10]}}
+{\footnotesize\ttfamily \label{testa__conta__palavras_8cpp_acc72a7c929ece0ef3d085f0ff6875f4b} 
+TEST\+\_\+\+CASE (\begin{DoxyParamCaption}\item[{"{}Teste 4\+: contagem de ocorrências das palavras"{}}]{}{}\end{DoxyParamCaption})}
+
+
+
+Testa a contagem de ocorrências das palavras. 
+
+Verifica se as palavras repetidas têm sua contagem corretamente incrementada. \Hypertarget{testa__conta__palavras_8cpp_aa2d43f11ecf2a0c506073557dd31e532}\index{testa\_conta\_palavras.cpp@{testa\_conta\_palavras.cpp}!TEST\_CASE@{TEST\_CASE}}
+\index{TEST\_CASE@{TEST\_CASE}!testa\_conta\_palavras.cpp@{testa\_conta\_palavras.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_CASE()}{TEST\_CASE()}\hspace{0.1cm}{\footnotesize\ttfamily [6/10]}}
+{\footnotesize\ttfamily \label{testa__conta__palavras_8cpp_aa2d43f11ecf2a0c506073557dd31e532} 
+TEST\+\_\+\+CASE (\begin{DoxyParamCaption}\item[{"{}Teste 5\+: separação com pontuação e caracteres especiais"{}}]{}{}\end{DoxyParamCaption})}
+
+
+
+Testa a separação de palavras com pontuação e caracteres especiais. 
+
+Garante que pontuações e caracteres especiais não interfiram na separação das palavras. \Hypertarget{testa__conta__palavras_8cpp_a40c405d275b25b721685a2ec5001b1be}\index{testa\_conta\_palavras.cpp@{testa\_conta\_palavras.cpp}!TEST\_CASE@{TEST\_CASE}}
+\index{TEST\_CASE@{TEST\_CASE}!testa\_conta\_palavras.cpp@{testa\_conta\_palavras.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_CASE()}{TEST\_CASE()}\hspace{0.1cm}{\footnotesize\ttfamily [7/10]}}
+{\footnotesize\ttfamily \label{testa__conta__palavras_8cpp_a40c405d275b25b721685a2ec5001b1be} 
+TEST\+\_\+\+CASE (\begin{DoxyParamCaption}\item[{"{}Teste 6\+: normalização das palavras para lower\+Case"{}}]{}{}\end{DoxyParamCaption})}
+
+
+
+Testa a normalização para letras minúsculas. 
+
+Verifica se todas as palavras são convertidas para minúsculas. \Hypertarget{testa__conta__palavras_8cpp_a2f63d16fae90f841cfd90380d06561b4}\index{testa\_conta\_palavras.cpp@{testa\_conta\_palavras.cpp}!TEST\_CASE@{TEST\_CASE}}
+\index{TEST\_CASE@{TEST\_CASE}!testa\_conta\_palavras.cpp@{testa\_conta\_palavras.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_CASE()}{TEST\_CASE()}\hspace{0.1cm}{\footnotesize\ttfamily [8/10]}}
+{\footnotesize\ttfamily \label{testa__conta__palavras_8cpp_a2f63d16fae90f841cfd90380d06561b4} 
+TEST\+\_\+\+CASE (\begin{DoxyParamCaption}\item[{"{}Teste 7\+: normalização das palavras com remoção de acento"{}}]{}{}\end{DoxyParamCaption})}
+
+
+
+Testa a remoção de acentos. 
+
+Garante que caracteres acentuados são convertidos para suas versões sem acento. \Hypertarget{testa__conta__palavras_8cpp_ac619e69a5e660a7496f8809db4cbfcab}\index{testa\_conta\_palavras.cpp@{testa\_conta\_palavras.cpp}!TEST\_CASE@{TEST\_CASE}}
+\index{TEST\_CASE@{TEST\_CASE}!testa\_conta\_palavras.cpp@{testa\_conta\_palavras.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_CASE()}{TEST\_CASE()}\hspace{0.1cm}{\footnotesize\ttfamily [9/10]}}
+{\footnotesize\ttfamily \label{testa__conta__palavras_8cpp_ac619e69a5e660a7496f8809db4cbfcab} 
+TEST\+\_\+\+CASE (\begin{DoxyParamCaption}\item[{"{}Teste 8\+: ordenação alfabética das palavras"{}}]{}{}\end{DoxyParamCaption})}
+
+
+
+Testa a ordenação alfabética das palavras. 
+
+Garante que as palavras são ordenadas em ordem alfabética, ignorando maiúsculas e minúsculas. \Hypertarget{testa__conta__palavras_8cpp_aaebc482c54616a8c2d3e91d1e5834f3e}\index{testa\_conta\_palavras.cpp@{testa\_conta\_palavras.cpp}!TEST\_CASE@{TEST\_CASE}}
+\index{TEST\_CASE@{TEST\_CASE}!testa\_conta\_palavras.cpp@{testa\_conta\_palavras.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_CASE()}{TEST\_CASE()}\hspace{0.1cm}{\footnotesize\ttfamily [10/10]}}
+{\footnotesize\ttfamily \label{testa__conta__palavras_8cpp_aaebc482c54616a8c2d3e91d1e5834f3e} 
+TEST\+\_\+\+CASE (\begin{DoxyParamCaption}\item[{"{}Teste 9\+: ordenação considerando letras minúsculas e maiúsculas"{}}]{}{}\end{DoxyParamCaption})}
+
+
+
+Testa a ordenação considerando letras maiúsculas e minúsculas. 
+
+Verifica se a ordenação trata palavras com diferentes capitalizações de forma consistente. 
