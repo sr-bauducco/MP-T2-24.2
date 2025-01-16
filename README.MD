@@ -37,17 +37,16 @@ MinGW (via Chocolatey)
 Com o Chocolatey instalado, execute:
 
 
-
 choco install mingw
+
 Microsoft Visual Studio
 Baixe e instale o Visual Studio Community.
 Durante a instalação, selecione a carga de trabalho "Desenvolvimento de desktop com C++".
+
 ## 3. Instalar o CMake
 Execute o comando no PowerShell (com o Chocolatey):
-
-
-
 choco install cmake
+
 ## 4. Instalar o GCov
 O GCov está incluído no GCC, que é instalado com o MinGW:
 

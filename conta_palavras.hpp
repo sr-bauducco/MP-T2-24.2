@@ -1,7 +1,5 @@
 /**
  * \file conta_palavras.hpp
- * \author [Seu Nome]
- * \date [Data]
  * \version 1.0
  * 
  * \brief Declaração das funções para o contador de palavras.

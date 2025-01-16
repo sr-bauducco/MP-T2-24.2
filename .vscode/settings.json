@@ -1,7 +1,8 @@
 {
     "files.associations": {
         "ostream": "cpp",
-        "codecvt": "cpp"
+        "codecvt": "cpp",
+        "string": "cpp"
     },
     "editor.wordWrap": "on"
 }

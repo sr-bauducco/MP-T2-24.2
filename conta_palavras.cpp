@@ -1,8 +1,25 @@
 /**
  * \file conta_palavras.cpp
+ * \version 1.0
+ * 
  * \brief Implementação das funções para contagem e ordenação das palavras do texto.
- * \author Ana Luísa de Souza Paraguassu - 231003442.
+ *
+ * \details Este arquivo contém a implementação das funções para:
+ * - Ler o conteúdo de arquivos de texto.
+ * - Contar palavras e suas frequências em um texto.
+ * - Ordenar palavras por frequência ou ordem alfabética.
+ * - Exibir resultados no console.
+ *
+ * \example
+ * \code
+ * std::string texto = lerArquivo("arquivo.txt");
+ * auto palavras = ContaPalavras(texto);
+ * \endcode
+ *
+ * \note Para garantir resultados precisos, o texto é normalizado removendo acentos
+ * e convertendo para letras minúsculas.
  */
+
 #include "conta_palavras.hpp"
 #include <iostream>
 #include <fstream>
@@ -12,6 +29,9 @@
 #include <utility>
 #include <locale>
 #include <codecvt>
+
+// Implementações seguem...
+
 
 /**
  * \brief Lê o conteúdo de um arquivo e retorna como uma string.
