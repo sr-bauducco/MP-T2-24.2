@@ -55,9 +55,7 @@ bash
 
 choco install mingw
 Verifique a instalação com:
-bash
 
-2.
 gcov --version
 ## 5. Instalar o CPPLint
 Certifique-se de ter o Python instalado.
