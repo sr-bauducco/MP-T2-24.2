@@ -36,7 +36,7 @@ O **Chocolatey** é um gerenciador de pacotes para Windows que facilita a instal
 MinGW (via Chocolatey)
 Com o Chocolatey instalado, execute:
 bash
-Copiar
+
 Editar
 choco install mingw
 Microsoft Visual Studio
@@ -45,37 +45,37 @@ Durante a instalação, selecione a carga de trabalho "Desenvolvimento de deskto
 ## 3. Instalar o CMake
 Execute o comando no PowerShell (com o Chocolatey):
 bash
-Copiar
+
 Editar
 choco install cmake
 ## 4. Instalar o GCov
 O GCov está incluído no GCC, que é instalado com o MinGW:
 bash
-Copiar
+
 Editar
 choco install mingw
 Verifique a instalação com:
 bash
-Copiar
+
 2.Editar
 gcov --version
 ## 5. Instalar o CPPLint
 Certifique-se de ter o Python instalado.
 Use o comando:
 bash
-Copiar
+
 Editar
 pip install cpplint
 ## 6. Instalar o CppCheck
 Instale o CppCheck com o Chocolatey:
 bash
-Copiar
+
 Editar
 choco install cppcheck
 ## 7. Instalar o Doxygen
 Instale o Doxygen com o Chocolatey:
 bash
-Copiar
+
 Editar
 choco install doxygen
 Alternativamente, baixe o Doxygen do site oficial: Doxygen Downloads.
