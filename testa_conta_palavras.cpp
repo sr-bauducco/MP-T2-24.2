@@ -1,7 +1,5 @@
 /**
  * \file testa_conta_palavras.cpp
- * \author Ana Luísa de Souza Paraguassu - 231003442
- * \date [Data]
  * \version 1.0
  * 
  * \brief Testes unitários para verificar a funcionalidade do contador de palavras.

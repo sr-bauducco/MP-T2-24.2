@@ -62,7 +62,6 @@ Certifique-se de ter o Python instalado.
 Use o comando:
 
 
-
 pip install cpplint
 ## 6. Instalar o CppCheck
 Instale o CppCheck com o Chocolatey:

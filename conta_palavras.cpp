@@ -1,5 +1,5 @@
 /**
- * \file conta_palavras.cpp
+ * \file conta_palavras.cpp.cpp
  * \version 1.0
  * 
  * \brief Implementação das funções para contagem e ordenação das palavras do texto.
