@@ -1,7 +1,29 @@
 /**
  * \file conta_palavras.hpp
+ * \author [Seu Nome]
+ * \date [Data]
+ * \version 1.0
+ * 
  * \brief Declaração das funções para o contador de palavras.
  *
+ * Este arquivo contém as declarações de funções que permitem:
+ * - Ler o conteúdo de arquivos de texto.
+ * - Contar palavras e suas frequências em um texto.
+ * - Ordenar palavras por frequência.
+ * - Exibir resultados no console.
+ *
+ * \details
+ * Este código usa métodos como merge sort para ordenar os pares
+ * (palavra, frequência) e inclui suporte a funções como remoção de acentos
+ * e conversão para letras minúsculas, melhorando a precisão da contagem.
+ *
+ * \example
+ * \code
+ * std::string texto = lerArquivo("meuarquivo.txt");
+ * auto palavras = ContaPalavras(texto);
+ * ordenaPalavras(palavras);
+ * printaResultado(palavras);
+ * \endcode
  */
 #ifndef CONTA_PALAVRAS_HPP_
 #define CONTA_PALAVRAS_HPP_
